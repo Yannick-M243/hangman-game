@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import Result from './Result.js'
 import Help from './Help.js'
 import ImageState from './ImageState.js';
@@ -13,9 +12,11 @@ function Hangman(props) {
     const restart = props.reset;
     const chosenWord = props.chosenWord;
     const updateUsedLetters = props.updateUsedLetters;
+    const helpState = props.helpState;
+    const showHelp = props.showHelp;
     const livesLeft = (10 - gameState);
 
-    console.log(usedLetters);
+    console.log(helpState);
     //creating buttons for each letter of the alphabet
     let buttons = alphabet.map((letter, key) => {
         //check if the button clicked has been clicked before, if yes then disable it
@@ -44,12 +45,13 @@ function Hangman(props) {
 
     return (
         <div>
-            <div className='d-flex justify-content-between'>
+            {showHelp ? <Help helpState={helpState} hide={showHelp} /> : ''}
+            <div className='navbar d-flex justify-content-between'>
                 <div>
                     <h1 className='m-3'>Hangman Game</h1>
                 </div>
                 <div>
-                    <button className='btn btn-info m-2'>Help?</button>
+                    <button className='btn btn-info m-2' onClick={showHelp} >Help?</button>
                     <button className='btn btn-outline-warning m-2' onClick={restart}>Reset</button>
                 </div>
             </div>
@@ -59,7 +61,10 @@ function Hangman(props) {
             <div className='keyboard d-flex justify-content-center flex-wrap mx-auto'>
                 {buttons}
             </div>
-            <Result result={result} correctWord={chosenWord} />
+            <div className='d-flex flex-column align-items-center'>
+                <Result result={result} correctWord={chosenWord} />
+                {result === "winning" || result === "loosing" ? <button className='btn btn-primary m-2' onClick={restart}>Play Again</button> : ''}
+            </div>
         </div>
     );
 }

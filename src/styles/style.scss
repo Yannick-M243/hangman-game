@@ -7,3 +7,25 @@
 .word{
     letter-spacing: 3px;
 }
+.navbar, .footer{
+    background-color: rgba(197, 195, 195, 0.373);
+}
+.footer{
+position:fixed;
+bottom:0;
+width: 100%;
+}
+.help-container{
+    position: absolute;
+    top: 97px;
+    right: 10px;
+    width: 600px;
+    height: fit-content;
+    
+    button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+
+}

@@ -10,6 +10,7 @@ class Words extends Component {
     constructor(props) {
         super(props);
         this.updateUsedLetters = this.updateUsedLetters.bind(this);
+        this.showHelp = this.showHelp.bind(this);
 
         //initializing states
         this.state = {
@@ -17,7 +18,8 @@ class Words extends Component {
             chosenWord: null,  
             word: [],   
             usedLetters: [], 
-            gameState: 0  
+            gameState: 0,
+            help: false
         }
     }
 
@@ -136,6 +138,15 @@ class Words extends Component {
         }, () => this.generateUnderscores())//calling the generate underscores function to hide the new word
     }
 
+    //this function change the state of help when the user clicks on the button help
+    showHelp = () => {
+        if (!this.state.help) {
+            this.setState({ help : true });
+        } else {
+            this.setState({ help : false});
+        } 
+    }
+
     render() {
         return (
             <div>
@@ -144,9 +155,11 @@ class Words extends Component {
                     usedLetters={this.state.usedLetters}
                     gameState={this.state.gameState}
                     word={this.state.word}
-                    restart={this.reset}
+                    reset={this.reset}
                     updateUsedLetters={this.updateUsedLetters}
                     chosenWord={this.state.chosenWord}
+                    helpState={this.state.help}
+                    showHelp={this.showHelp}
                 />
             </div>
         )
