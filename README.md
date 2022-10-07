@@ -20,4 +20,4 @@ This project was built using:
 
 ## Contributor & Contact
 - Yannick Boteti Makwenge : yannickmakwenge@gmail.com
-- Repository link : [https://github.com/Yannick-M243/E-Commerce-Website](https://github.com/Yannick-M243/Cool_tech).
+- Repository link : [https://github.com/Yannick-M243/hangman-game](https://github.com/Yannick-M243/hangman-game).
