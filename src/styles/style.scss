@@ -18,7 +18,7 @@
     position: absolute;
     top: 97px;
     right: 10px;
-    width: 600px;
+    width: 50%;
     height: fit-content;
 
     button {
@@ -26,4 +26,11 @@
         top: 0;
         right: 0;
     }
+}
+@media only screen and (max-width: 600px) {
+    .help-container {
+        width: 80%;
+        top: 135px;   
+    }
+   
 }
