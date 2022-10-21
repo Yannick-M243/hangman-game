@@ -14,7 +14,6 @@ function Help(props) {
                     if the hidden word contains the letter you have selected, it will appear on the screen, if not you will lose one life.
                     If you reach 0 lives left and you still haven't found the hidden word, You've lost.
                 </p>
-
             </div>
         );
     } else {

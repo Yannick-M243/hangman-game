@@ -16,7 +16,6 @@ function Hangman(props) {
     const showHelp = props.showHelp;
     const livesLeft = (10 - gameState);
 
-    console.log(helpState);
     //creating buttons for each letter of the alphabet
     let buttons = alphabet.map((letter, key) => {
         //check if the button clicked has been clicked before, if yes then disable it
