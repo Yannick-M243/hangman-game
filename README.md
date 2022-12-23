@@ -16,7 +16,7 @@ This project was built using:
 - IDE: Visual Studio Code
 
 ## Play
-- Heroku Link : [https://hangman-game243.herokuapp.com/](https://hangman-game243.herokuapp.com/).
+- Heroku Link : [https://hangmannn-game.netlify.app/](https://hangmannn-game.netlify.app/).
 
 ## Contributor & Contact
 - Yannick Boteti Makwenge : yannickmakwenge@gmail.com
