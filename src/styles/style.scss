@@ -12,7 +12,10 @@
     background-color: rgba(197, 195, 195, 0.373);
 }
 .footer {
+    position: fixed;
+    bottom: 0;
     margin-top: 70px;
+    width: 100%;
 }
 .help-container {
     position: absolute;
